@@ -2,7 +2,7 @@
 
 Репозиторий с решениями алгоритмических задач на Python.
 
-[![CI](https://github.com/yourusername/leetcode/actions/workflows/ci.yml/badge.svg)](https://github.com/yourusername/leetcode/actions)
+[![CI](https://github.com/irefuse3585/leetcode/actions/workflows/ci.yml/badge.svg)](https://github.com/irefuse3585/leetcode/actions)
 [![Python Version](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org)
 
 ---
