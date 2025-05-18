@@ -1,5 +1,5 @@
 import pytest
-from two_sum.two_sum import Solution
+from p1_two_sum.two_sum import Solution
 
 @pytest.mark.parametrize("nums,target,expected", [
     ([2,7,11,15], 9, [0,1]),
