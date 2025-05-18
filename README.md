@@ -18,7 +18,7 @@
 
 1. **Клонируем репозиторий**  
    ```bash
-   git clone git@github.com:yourusername/leetcode.git
+   git clone git@github.com:irefuse3585/leetcode.git
    cd leetcode
    ```
 
@@ -100,4 +100,4 @@ print(Solution().twoSum(nums, target))  # [0, 1]
 
 ## ✉️ Контакты
 
-Если есть вопросы или предложения — пишите на your.email@example.com или открывайте issue.
+Если есть вопросы или предложения — пишите на kutgos@gmail.com или открывайте issue.
