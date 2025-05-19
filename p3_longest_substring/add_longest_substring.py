@@ -1,19 +1,10 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        if not s:
-            return 0
-        else:
-            max_len = 1
-            current = s[0]
-            for i in range(1, len(s)):
-                if s[i] not in current:
-                    current += s[i]
-                    if len(current) > max_len:
-                        max_len = len(current)
-                else:
-                    if s[i] == s[i-1]:
-                        current = s[i]
-                    else:
-                        idx = current.find(s[i])
-                        current = current[idx+1:] + s[i]
-            return max_len
+        last_pos = {}   # хранит последнее вхождение символа
+        max_len = left = 0
+        for right, ch in enumerate(s):
+            if ch in last_pos and last_pos[ch] >= left:
+                left = last_pos[ch] + 1
+            last_pos[ch] = right
+            max_len = max(max_len, right - left + 1)
+        return max_len
