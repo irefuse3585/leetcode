@@ -71,14 +71,32 @@ print(Solution().twoSum(nums, target))  # [0, 1]
 
 ## ➕ Как добавить новую задачу
 
-1. Создать ветку:
+1. Перейти на `main` и обновиться:  
    ```bash
-   git checkout -b add-<problem-name>
+   git checkout main && git pull
    ```
-2. Добавить папку `<problem-name>/` с файлом решения, тестами и `README.md`.
-3. При необходимости обновить `requirements.txt`.
-4. `git add . && git commit -m "Add <Problem Name>"`
-5. `git push -u origin add-<problem-name>` и открыть Pull Request.
+2. Создать ветку:
+   ```bash
+   git checkout -b feat/p{номер}_{snake_case}
+   ```
+3. Добавить папку `p{номер}_{snake_case}` с файлами:
+   - `__init__.py`
+   - `{snake_case}.py` (решение)
+   - `test_{snake_case}.py`
+   - `README.md`
+4. Закоммитить:
+   ```bash
+   git add . 
+   git commit -m "feat(p{номер}_{snake_case}): add solution"
+   ```
+5. Запушить и открыть PR:
+   ```bash
+   git push -u origin feat/p{номер}_{snake_case}
+   ```
+   После зелёного CI и одобрения — **Merge pull request**, затем:
+   ```bash
+   git checkout main && git pull
+   ```
 
 ---
 
