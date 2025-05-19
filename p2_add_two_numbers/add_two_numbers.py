@@ -5,35 +5,26 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-        
+
 class Solution:
-    @staticmethod
-    def build_linked_list(values: list[int]) -> Optional[ListNode]:
+    def addTwoNumbers(
+        self,
+        l1: Optional[ListNode],
+        l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
         dummy = ListNode(0)
         tail = dummy
-        for v in values:
-            node = ListNode(v)
-            tail.next = node
-            tail = node
-        return dummy.next
+        carry = 0
 
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        sum1 = 0
-        sum2 = 0
-        i = 0
-        while l1 is not None or l2 is not None:
-            if l1 is not None:
-                sum1 += l1.val * pow(10, i)
-                l1 = l1.next
-            if l2 is not None:
-                sum2 += l2.val * pow(10, i)
-                l2 = l2.next
-            i += 1
-        total = sum1 + sum2
-        final = []
-        if total == 0:
-            final.append(0)
-        while total != 0:
-            final.append(total % 10)
-            total //= 10
-        return Solution.build_linked_list(final)
+        while l1 or l2 or carry:
+            v1 = l1.val if l1 else 0
+            v2 = l2.val if l2 else 0
+            carry, digit = divmod(v1 + v2 + carry, 10)
+
+            tail.next = ListNode(digit)
+            tail = tail.next
+
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
+
+        return dummy.next

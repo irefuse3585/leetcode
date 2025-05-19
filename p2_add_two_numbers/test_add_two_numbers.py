@@ -41,7 +41,7 @@ def linked_list_to_list(node: ListNode | None) -> list[int]:
 )
 def test_add_two_numbers(a: list[int], b: list[int], expected: list[int]):
     sol = Solution()
-    l1 = sol.build_linked_list(a)
-    l2 = sol.build_linked_list(b)
+    l1 = build_linked_list(a)
+    l2 = build_linked_list(b)
     result = sol.addTwoNumbers(l1, l2)
     assert linked_list_to_list(result) == expected
