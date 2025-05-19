@@ -1,7 +1,7 @@
 # p3_longest_substring/test_longest_substring.py
 
 import pytest
-from p3_longest_substring.add_longest_substring import Solution
+from p3_longest_substring.longest_substring import Solution
 
 @pytest.mark.parametrize(
     "s, expected",
