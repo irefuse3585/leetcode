@@ -14,13 +14,6 @@ class Solution:
                     if s[i] == s[i-1]:
                         current = s[i]
                     else:
-                        idx = s.find(s[i])
-                        current = s[:idx]
+                        idx = current.find(s[i])
+                        current = current[idx+1:] + s[i]
             return max_len
-
-if __name__ == "__main__":
-    print(Solution().lengthOfLongestSubstring("abcabcbb"))   # 3
-    print(Solution().lengthOfLongestSubstring("bbbbb"))      # 1
-    print(Solution().lengthOfLongestSubstring("pwwkew"))     # 3
-    print(Solution().lengthOfLongestSubstring(" "))          # 1
-    print(Solution().lengthOfLongestSubstring(""))           # 0
