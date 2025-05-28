@@ -1,21 +1,21 @@
 # LeetCode #2: Add Two Numbers
 
-## 📖 Условие
+## 📖 Problem
 
-Даны два непустых односвязных списка (ListNode), представляющих два неотрицательных числа.  
-Цифры хранятся в обратном порядке (младший разряд — в начале списка).  
-Каждый узел содержит одну цифру (0–9).  
+You are given two non-empty singly linked lists (`ListNode`) representing two non-negative integers.  
+Digits are stored in reverse order (least significant digit at the head).  
+Each node contains a single digit (0–9).  
 
-Нужно сложить эти два числа и вернуть результат в виде связного списка таким же образом.
+Add the two numbers and return the sum as a linked list in the same reverse order.
 
-## 🚀 Решение (O(n))
+## 🚀 Solution (O(n))
 
-1. Инициализируем:
-   - `dummy = ListNode(0)` — фиктивная голова результирующего списка.
-   - `tail = dummy` — указатель на «хвост» результата.
-   - `carry = 0` — перенос «десятков».
+1. Initialize:  
+   - `dummy = ListNode(0)` — dummy head of the result list.  
+   - `tail = dummy` — pointer to the tail of the result.  
+   - `carry = 0` — carry for the next digit.
 
-2. Пока есть цифры в `l1` или `l2` или непустой `carry`:
+2. While there are nodes in `l1` or `l2`, or `carry` is non-zero:  
    ```python
    v1 = l1.val if l1 else 0
    v2 = l2.val if l2 else 0
@@ -26,17 +26,17 @@
    l2 = l2.next if l2 else None
    ```
 
-3. Возвращаем `dummy.next` — голову готового списка.
+3. Return `dummy.next` as the head of the summed list.
 
-## 🔢 Пример
+## 🔢 Example
 
 ```
 l1 = [2,4,3]   # 342
 l2 = [5,6,4]   # 465
-результат → [7,0,8]  # 807
+result → [7,0,8]  # 807
 ```
 
-## 📊 Сложность
+## 📊 Complexity
 
-- Время: O(max(n, m))  
-- Память: O(max(n, m))
+- Time: O(max(n, m))  
+- Space: O(max(n, m))

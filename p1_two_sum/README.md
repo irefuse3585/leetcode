@@ -1,20 +1,21 @@
 # LeetCode #1: Two Sum
 
-**Условие:**  
-Дан массив `nums` и число `target`. Найти индексы двух чисел, сумма которых равна `target`.
+**Problem:**  
+Given an array `nums` and a number `target`, find indices of the two numbers such that they add up to `target`.
 
-**Идея решения:**  
-Используем словарь (hash map) за один проход O(n):
-1. Для каждого `num` вычисляем `need = target - num`.
-2. Если `need` уже встречался — возвращаем пару индексов.
-3. Иначе сохраняем `num → его индекс`.
+**Solution Idea:**  
+Use a hash map in one pass O(n):  
+1. For each `num`, compute `need = target - num`.  
+2. If `need` has already been seen — return the pair of indices.  
+3. Otherwise, store `num → its index` in the map.
 
-**Сложность:**  
-- Время: O(n)  
-- Память: O(n)
+**Complexity:**  
+- Time: O(n)  
+- Space: O(n)
 
-**Пример:**
+**Example:**
 ```python
 nums = [2,7,11,15]
 target = 9
 # → [0,1]
+```
