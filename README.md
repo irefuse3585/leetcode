@@ -1,37 +1,37 @@
 # LeetCode Solutions
 
-Репозиторий с решениями алгоритмических задач на Python.
+Repository with algorithmic problem solutions in Python.
 
-[![CI](https://github.com/irefuse3585/leetcode/actions/workflows/ci.yml/badge.svg)](https://github.com/irefuse3585/leetcode/actions)
+[![CI](https://github.com/irefuse3585/leetcode/actions/workflows/ci.yml/badge.svg)](https://github.com/irefuse3585/leetcode/actions)  
 [![Python Version](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org)
 
 ---
 
-## 📖 Описание
+## 📖 Description
 
-В этом репозитории собраны решения алгоритмических задач LeetCode на Python.  
-Каждая задача оформлена в отдельной папке: код, тесты и подробное описание.
+This repository contains Python solutions for LeetCode algorithmic problems.  
+Each problem is organized in its own folder: code, tests, and detailed description.
 
 ---
 
-## 📥 Установка и настройка
+## 📥 Installation and Setup
 
-1. **Клонируем репозиторий**  
+1. **Clone the repository**  
    ```bash
    git clone git@github.com:irefuse3585/leetcode.git
    cd leetcode
    ```
 
-2. **Создаём виртуальное окружение**  
+2. **Create a virtual environment**  
    ```bash
    python3 -m venv .venv
    ```
-   Если установлено несколько версий Python, можно явно указать версию, например:
+   If you have multiple Python versions, specify one explicitly, e.g.:  
    ```bash
    python3.10 -m venv .venv
    ```
 
-3. **Активируем окружение**  
+3. **Activate the environment**  
    - macOS / Linux:  
      ```bash
      source .venv/bin/activate
@@ -41,7 +41,7 @@
      .\.venv\Scripts\Activate.ps1
      ```
 
-4. **Устанавливаем зависимости**  
+4. **Install dependencies**  
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
@@ -49,7 +49,7 @@
 
 ---
 
-## ✅ Запуск тестов
+## ✅ Running Tests
 
 ```bash
 pytest
@@ -57,7 +57,7 @@ pytest
 
 ---
 
-## 🚀 Пример использования решения
+## 🚀 Usage Example
 
 ```python
 from two_sum.two_sum import Solution
@@ -69,31 +69,31 @@ print(Solution().twoSum(nums, target))  # [0, 1]
 
 ---
 
-## ➕ Как добавить новую задачу
+## ➕ How to Add a New Problem
 
-1. Перейти на `main` и обновиться:  
+1. Checkout and update `main`:  
    ```bash
    git checkout main && git pull
    ```
-2. Создать ветку:
+2. Create a branch:  
    ```bash
-   git checkout -b feat/p{номер}_{snake_case}
+   git checkout -b feat/p{number}_{snake_case}
    ```
-3. Добавить папку `p{номер}_{snake_case}` с файлами:
-   - `__init__.py`
-   - `{snake_case}.py` (решение)
-   - `test_{snake_case}.py`
+3. Add a folder `p{number}_{snake_case}` containing:  
+   - `__init__.py`  
+   - `{snake_case}.py` (solution)  
+   - `test_{snake_case}.py`  
    - `README.md`
-4. Закоммитить:
+4. Commit your changes:  
    ```bash
-   git add . 
-   git commit -m "feat(p{номер}_{snake_case}): add solution"
+   git add .
+   git commit -m "feat(p{number}_{snake_case}): add solution"
    ```
-5. Запушить и открыть PR:
+5. Push and open a PR:  
    ```bash
-   git push -u origin feat/p{номер}_{snake_case}
+   git push -u origin feat/p{number}_{snake_case}
    ```
-   После зелёного CI и одобрения — **Merge pull request**, затем:
+   After CI passes and review is approved — merge into `main`, then:  
    ```bash
    git checkout main && git pull
    ```
@@ -102,20 +102,20 @@ print(Solution().twoSum(nums, target))  # [0, 1]
 
 ## 🤝 Contributing
 
-Буду рад новым задачам и улучшениям! Пожалуйста, соблюдайте:
+Contributions are welcome! Please ensure:
 
-- Оформляйте код по PEP8.  
-- Пишите unit-тесты.  
-- Следуйте шаблону папки задачи.
-
----
-
-## 📜 Лицензия
-
-Этот проект распространяется под условиями **MIT License** — подробности в файле [LICENSE](LICENSE).
+- Code follows **PEP8**.  
+- Unit tests are provided.  
+- The problem folder structure is respected.
 
 ---
 
-## ✉️ Контакты
+## 📜 License
 
-Если есть вопросы или предложения — пишите на kutgos@gmail.com или открывайте issue.
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for details.
+
+---
+
+## ✉️ Contact
+
+If you have questions or suggestions, email **kutgos@gmail.com** or open an issue.
