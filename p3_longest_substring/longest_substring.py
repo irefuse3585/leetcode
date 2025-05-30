@@ -1,6 +1,6 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        last_pos = {}   # хранит последнее вхождение символа
+        last_pos = {}
         max_len = left = 0
         for right, ch in enumerate(s):
             if ch in last_pos and last_pos[ch] >= left:
